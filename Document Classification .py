@@ -65,7 +65,7 @@ oversampled.reset_index(inplace=True)
 oversampled.columns=['Quality','Files']
 oversampled
 
-#Vectorize the data or convert the text into numeric values to perform classification (term frequence-inverse frequency)
+#Vectorize the data or convert the text into numeric values to perform classification (term frequence - inverse document frequency)
 tfidf = TfidfVectorizer(sublinear_tf=True, min_df=5, norm='l2', encoding='latin-1', ngram_range=(1, 2), stop_words='english')
 features = tfidf.fit_transform(oversampled.Files).toarray()
 labels = oversampled.Quality
