@@ -31,7 +31,6 @@ from sklearn.svm import LinearSVC
 from sklearn.model_selection import cross_val_score
 from collections import Counter
 from sklearn.datasets import make_classification
-from imblearn.over_sampling import RandomOverSampler
 
 #Import the labeled files
 pdfiles=pd.read_excel(r'************************************************',sheet_name=False)
